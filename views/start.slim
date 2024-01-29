@@ -1,6 +1,44 @@
-h1 Start Page
+doctype html
+html
+  head
+    link rel="stylesheet" href="css/style.css" type="text/css"
+    link rel="icon" href="img/favicon.ico" type="image/x-icon"
+    title AnonyPay
+  body
+    header#header
+      div#menu-button
+        a#menuToggle href="javascript:void(0);"
+          img#menuImg src="img/menuImg.png"
+      div#t
+        h1 AnonyPay
+      div#signin-button
+        a href="/signin"
+          img#signinImg src="img/user.png"
+    nav#nav-div
+      ul#nav-ul
+        li
+          a.nav-a href="/" HEM
+        li
+          a.nav-a href="/signin" SOW
+        li
+          a.nav-a href="/dashboard" ALT
+    div#content
+      h2 Your Ultimate Payment Solution
+      p AnonyPay invites you to a world of secure and hassle-free transactions. Join us now and discover why we are the leaders in the industry.
+      a.btn href="/signup" Join Now
 
-ul
-  li Din
-  li Pappas
-  li Blommor
+    div#menu-overlay
+    div#menu
+      ul
+        li
+          a href="/" Home
+        li
+          a href="/signin" Sign In
+        li
+          a href="/dashboard" Dashboard
+      a#closeMenu href="javascript:void(0);" Close
+
+
+
+      
+    script src="js/app.js" defer
