@@ -9,8 +9,10 @@
 
 /* #------------------------------------------ */
 
-body {
-    background-color: white;
+#startBody {
+    background-image: url('/img/t.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 #signinBody {
@@ -27,6 +29,10 @@ header {
     align-items: center;
     padding: 20px;
     background-color: white;
+}
+
+#header {
+    background-color: rgba(255, 255, 255, 0);
 }
 
 #menu-button, #signin-button {
@@ -46,6 +52,10 @@ h1 {
     cursor: default;
 }
 
+.whiteColor {
+    color: white;
+}
+
 #t {
     display: flex;
     justify-content: center;
@@ -54,6 +64,7 @@ h1 {
 
 #nav-div {
     flex: 1;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 nav {
@@ -73,7 +84,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: rgb(39, 39, 39);
+    color: white;
     font-weight: bold;
     transition: 0.25s;
     font-size: 16px;
