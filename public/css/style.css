@@ -142,6 +142,7 @@ a.btn:hover {
     height: 100%;
     z-index: 1;
     display: none;
+    transition: background-color 0.5s ease;
 }
 
 #menu-overlay::before {
@@ -155,16 +156,20 @@ a.btn:hover {
     backdrop-filter: blur(5px);
 }
 
+#menu.menu-open {
+    left: 0;
+}  
+
 #menu {
     position: fixed;
-    width: 250px;
+    width: 275px;
     height: 100%;
     background-color: white;
-    left: -250px;
+    left: -275px;
     top: 0;
     overflow-x: hidden;
     padding-top: 20px;
-    transition: 0.5s;
+    transition: left 0.5s ease;
     z-index: 2;
 }
 
@@ -195,6 +200,28 @@ a.btn:hover {
     font-size: 20px;
     color: white;
     cursor: pointer;
+}
+
+.menuImageStart {
+    width: 25px;
+    height: 25px;
+}
+
+#ulGrid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.liGrid {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 225px;
+}
+
+.aLink {
+    margin-left: 10px;
 }
 
 /* #------------------------------------------ */
@@ -321,4 +348,5 @@ input[type=text], select {
     margin-right: 135px;
     height: 35px;
 }
+
 /* #------------------------------------------ */
