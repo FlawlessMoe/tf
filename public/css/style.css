@@ -304,7 +304,7 @@ label[for="remember-checkbox"] {
     margin-right: 125px;
 }
 
-input[type=text] {
+input[type=text], select {
     width: 100%;
     display: inline-block;
     border: 1px solid #ccc;
@@ -314,5 +314,11 @@ input[type=text] {
 
 #styleDiv {
     display: flex;
+}
+
+#countryID{
+    margin-bottom: 25px;
+    margin-right: 135px;
+    height: 35px;
 }
 /* #------------------------------------------ */

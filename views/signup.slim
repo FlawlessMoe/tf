@@ -4,31 +4,231 @@ html
     link rel="stylesheet" href="css/style.css" type="text/css"
     link rel="icon" href="img/favicon.ico" type="image/x-icon"
     title AnonyPay - Sign Up
-  body#signinBody style="background-image: url('/img/bgg.gif'); background-size: cover; background-position: center; background-repeat: no-repeat;"
+  body#signinBody style="background-image: url('/img/bg.gif'); background-size: cover; background-position: center; background-repeat: no-repeat;"
     div#login-container
       a#back-button href="/" < Back
       h2#signinh2 AnonyPay
       form
         div#styleDiv
-            div.parallel
-                label.labelSignup for="name" Name:
-                input#name type="text" name="name"
-                
-            div.parallel 
-                label.labelSignup2 for="lastname" Lastname:
-                input#lastname type="text" name="lastname"
+          div.parallel
+            label.labelSignup for="name" Name:
+            input#name type="text" name="name"
+
+          div.parallel 
+            label.labelSignup2 for="lastname" Lastname:
+            input#lastname type="text" name="lastname"
 
         label for="email" Email:
         input#email type="text" name="email"
 
         div#styleDiv
-            div.parallel
-                label.labelSignup for="username" Username:
-                input#username type="text" name="username"
-                
-            div.parallel 
-                label.labelSignup2 for="password" Password:
-                input#password type="password" name="password"
+          div.parallel
+            label.labelSignup for="username" Username:
+            input#username type="text" name="username"
+
+          div.parallel 
+            label.labelSignup2 for="password" Password:
+            input#password type="password" name="password"
+
+        div#styleDiv
+          div.parallel
+            label.labelSignup for="country" Country:
+            select#countryID name="country"
+                option value="afghanistan" Afghanistan
+                option value="albania" Albania
+                option value="algeria" Algeria
+                option value="andorra" Andorra
+                option value="angola" Angola
+                option value="antigua-and-barbuda" Antigua and Barbuda
+                option value="argentina" Argentina
+                option value="armenia" Armenia
+                option value="australia" Australia
+                option value="austria" Austria
+                option value="azerbaijan" Azerbaijan
+                option value="bahamas" Bahamas
+                option value="bahrain" Bahrain
+                option value="bangladesh" Bangladesh
+                option value="barbados" Barbados
+                option value="belarus" Belarus
+                option value="belgium" Belgium
+                option value="belize" Belize
+                option value="benin" Benin
+                option value="bhutan" Bhutan
+                option value="bolivia" Bolivia
+                option value="bosnia-and-hercegovina" Bosnia and Hercegovina
+                option value="botswana" Botswana
+                option value="brazil" Brazil
+                option value="brunei" Brunei
+                option value="bulgaria" Bulgaria
+                option value="burkina-faso" Burkina Faso
+                option value="burundi" Burundi
+                option value="cabo-verde" Cabo Verde
+                option value="cambodia" Cambodia
+                option value="cameroon" Cameroon
+                option value="canada" Canada
+                option value="central-african-republic" Central African Republic
+                option value="chad" Chad
+                option value="chile" Chile
+                option value="china" China
+                option value="colombia" Colombia
+                option value="comoros" Comoros
+                option value="congo" Congo
+                option value="costa-rica" Costa Rica
+                option value="croatia" Croatia
+                option value="cuba" Cuba
+                option value="cyprus" Cyprus
+                option value="czech-republic" Czech Republic
+                option value="denmark" Denmark
+                option value="djibouti" Djibouti
+                option value="dominica" Dominica
+                option value="dominican-republic" Dominican Republic
+                option value="east-timor" East Timor
+                option value="ecuador" Ecuador
+                option value="egypt" Egypt
+                option value="el-salvador" El Salvador
+                option value="equatorial-guinea" Equatorial Guinea
+                option value="eritrea" Eritrea
+                option value="estonia" Estonia
+                option value="ethiopia" Ethiopia
+                option value="fiji" Fiji
+                option value="finland" Finland
+                option value="france" France
+                option value="gabon" Gabon
+                option value="gambia" Gambia
+                option value="georgia" Georgia
+                option value="germany" Germany
+                option value="ghana" Ghana
+                option value="greece" Greece
+                option value="grenada" Grenada
+                option value="guatemala" Guatemala
+                option value="guinea" Guinea
+                option value="guinea-bissau" Guinea-Bissau
+                option value="guyana" Guyana
+                option value="haiti" Haiti
+                option value="honduras" Honduras
+                option value="hungary" Hungary
+                option value="iceland" Iceland
+                option value="india" India
+                option value="indonesia" Indonesia
+                option value="iran" Iran
+                option value="iraq" Iraq
+                option value="ireland" Ireland
+                option value="israel" Israel
+                option value="italy" Italy
+                option value="ivory-coast" Ivory Coast
+                option value="jamaica" Jamaica
+                option value="japan" Japan
+                option value="jordan" Jordan
+                option value="kazakhstan" Kazakhstan
+                option value="kenya" Kenya
+                option value="kiribati" Kiribati
+                option value="kosovo" Kosovo
+                option value="kuwait" Kuwait
+                option value="kyrgyzstan" Kyrgyzstan
+                option value="laos" Laos
+                option value="latvia" Latvia
+                option value="lebanon" Lebanon
+                option value="lesotho" Lesotho
+                option value="liberia" Liberia
+                option value="libya" Libya
+                option value="liechtenstein" Liechtenstein
+                option value="lithuania" Lithuania
+                option value="luxembourg" Luxembourg
+                option value="macedonia" Macedonia
+                option value="madagascar" Madagascar
+                option value="malawi" Malawi
+                option value="malaysia" Malaysia
+                option value="maldives" Maldives
+                option value="mali" Mali
+                option value="malta" Malta
+                option value="marshall-islands" Marshall Islands
+                option value="mauritania" Mauritania
+                option value="mauritius" Mauritius
+                option value="mexico" Mexico
+                option value="micronesia" Micronesia
+                option value="moldova" Moldova
+                option value="monaco" Monaco
+                option value="mongolia" Mongolia
+                option value="montenegro" Montenegro
+                option value="morocco" Morocco
+                option value="mozambique" Mozambique
+                option value="myanmar" Myanmar
+                option value="namibia" Namibia
+                option value="nauru" Nauru
+                option value="nepal" Nepal
+                option value="netherlands" Netherlands
+                option value="new-zealand" New Zealand
+                option value="nicaragua" Nicaragua
+                option value="niger" Niger
+                option value="nigeria" Nigeria
+                option value="north-korea" North Korea
+                option value="norway" Norway
+                option value="oman" Oman
+                option value="pakistan" Pakistan
+                option value="palau" Palau
+                option value="panama" Panama
+                option value="papua-new-guinea" Papua New Guinea
+                option value="paraguay" Paraguay
+                option value="peru" Peru
+                option value="philippines" Philippines
+                option value="poland" Poland
+                option value="portugal" Portugal
+                option value="qatar" Qatar
+                option value="romania" Romania
+                option value="russia" Russia
+                option value="rwanda" Rwanda
+                option value="saint-kitts-and-nevis" Saint Kitts and Nevis
+                option value="saint-lucia" Saint Lucia
+                option value="saint-vincent-and-the-grenadines" Saint Vincent and the Grenadines
+                option value="samoa" Samoa
+                option value="san-marino" San Marino
+                option value="sao-tome-and-principe" Sao Tome and Principe
+                option value="saudi-arabia" Saudi Arabia
+                option value="senegal" Senegal
+                option value="serbia" Serbia
+                option value="seychelles" Seychelles
+                option value="sierra-leone" Sierra Leone
+                option value="singapore" Singapore
+                option value="slovakia" Slovakia
+                option value="slovenia" Slovenia
+                option value="solomon-islands" Solomon Islands
+                option value="somalia" Somalia
+                option value="south-africa" South Africa
+                option value="south-korea" South Korea
+                option value="south-sudan" South Sudan
+                option value="spain" Spain
+                option value="sri-lanka" Sri Lanka
+                option value="sudan" Sudan
+                option value="suriname" Suriname
+                option value="swaziland" Swaziland
+                option value="sweden" Sweden
+                option value="switzerland" Switzerland
+                option value="syria" Syria
+                option value="taiwan" Taiwan
+                option value="tajikistan" Tajikistan
+                option value="tanzania" Tanzania
+                option value="thailand" Thailand
+                option value="togo" Togo
+                option value="tonga" Tonga
+                option value="trinidad-and-tobago" Trinidad and Tobago
+                option value="tunisia" Tunisia
+                option value="turkey" Turkey
+                option value="turkmenistan" Turkmenistan
+                option value="tuvalu" Tuvalu
+                option value="uganda" Uganda
+                option value="ukraine" Ukraine
+                option value="united-arab-emirates" United Arab Emirates
+                option value="united-kingdom" United Kingdom
+                option value="usa" USA
+                option value="uruguay" Uruguay
+                option value="uzbekistan" Uzbekistan
+                option value="vanuatu" Vanuatu
+                option value="vatican-city" Vatican City
+                option value="venezuela" Venezuela
+                option value="vietnam" Vietnam
+                option value="yemen" Yemen
+                option value="zambia" Zambia
+                option value="zimbabwe" Zimbabwe
 
         button#signin-btn type="submit" Sign Up
 
