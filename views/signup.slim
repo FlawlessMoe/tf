@@ -9,21 +9,26 @@ html
       a#back-button href="/" < Back
       h2#signinh2 AnonyPay
       form
-        div.parallel
-            label for="name" Name:
-            input#name type="text" name="name"
-            
-            label for="lastname" Lastname:
-            input#lastname type="text" name="lastname"
+        div#styleDiv
+            div.parallel
+                label.labelSignup for="name" Name:
+                input#name type="text" name="name"
+                
+            div.parallel 
+                label.labelSignup2 for="lastname" Lastname:
+                input#lastname type="text" name="lastname"
 
         label for="email" Email:
         input#email type="text" name="email"
 
-        label for="username" Username:
-        input#username type="text" name="username"
-
-        label for="password" Password:
-        input#password type="password" name="password"
+        div#styleDiv
+            div.parallel
+                label.labelSignup for="username" Username:
+                input#username type="text" name="username"
+                
+            div.parallel 
+                label.labelSignup2 for="password" Password:
+                input#password type="password" name="password"
 
         button#signin-btn type="submit" Sign Up
 

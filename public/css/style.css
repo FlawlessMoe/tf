@@ -283,4 +283,36 @@ label[for="remember-checkbox"] {
     color: rgb(119, 119, 119);
 }
 
+.parallel {
+    width: 220px;
+}
+
+#lastname {
+    margin-left: 20px;
+}
+
+#password {
+    width: 220px;
+    margin-left: 20px;
+}
+
+.labelSignup {
+    margin-right: 250px;
+}
+
+.labelSignup2 {
+    margin-right: 125px;
+}
+
+input[type=text] {
+    width: 100%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#styleDiv {
+    display: flex;
+}
 /* #------------------------------------------ */
