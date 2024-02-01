@@ -15,6 +15,10 @@
     background-repeat: no-repeat;
 }
 
+#startBodyAccounts {
+    background-color: #fcfcff;
+}
+
 #signinBody {
     display: flex;
     align-items: center;
@@ -52,9 +56,26 @@ h1 {
     cursor: default;
 }
 
+h2 {
+    cursor: default;
+}
+
+p {
+    cursor: default;
+}
+
+.whiteColorh1 {
+    color: white;
+}
+
 .whiteColor {
     color: white;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    font-size: 50px;
+}
+
+.whiteColorp {
+    color: white;
+    font-size: 20px;
 }
 
 #t {
@@ -83,6 +104,25 @@ nav li {
     margin: 0 15px;
 }
 
+.nav-a {
+    padding: 5px 10px;
+    border-radius: 100px;
+    background-color: rgb(229, 229, 229, 0);
+}
+
+.nav-aAcc {
+    color: black;
+    padding: 5px 10px;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-a:hover {
+    padding: 5px 10px;
+    border-radius: 100px;
+    background-color: rgb(30, 30, 30);
+}
+
 nav a {
     text-decoration: none;
     color: white;
@@ -92,8 +132,14 @@ nav a {
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
+.nav-aAcc:hover {
+    padding: 5px 10px;
+    border-radius: 100px;
+    background-color: rgb(0, 0, 0);
+}
+
 nav a:hover {
-    color: rgb(229, 229, 229);
+    color: white;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -114,24 +160,50 @@ nav a:not(:hover) {
     margin-bottom: 50px;
 }
 
+#contentAccounts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+    margin-left: 80px;
+}
+
 #content h2,
 #content p {
     margin-top: 15px;
 }
 
-a.btn {
+#button {
+    margin-top: 50px;
+}
+
+.btn {
     padding: 10px 20px;
     background-color: white;
     color: black;
     font-weight: 800;
     text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 100px;
     transition: background-color 0.3s;
 }
 
-a.btn:hover {
-    background-color: rgb(229, 229, 229);
+.btnAcc {
+    padding: 15px 30px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: 100px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+.btn:hover {
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+
+.btnAcc:hover {
+    background-color: rgb(30, 30, 30);
 }
 
 #menu-overlay {
@@ -162,6 +234,9 @@ a.btn:hover {
 
 #menu {
     position: fixed;
+    display: grid;
+    justify-content: center;
+    align-items: center;
     width: 275px;
     height: 100%;
     background-color: white;
@@ -203,8 +278,8 @@ a.btn:hover {
 }
 
 .menuImageStart {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
 }
 
 #ulGrid {
@@ -218,10 +293,12 @@ a.btn:hover {
     justify-content: start;
     align-items: center;
     width: 225px;
+    margin-bottom: 30px;
 }
 
 .aLink {
     margin-left: 10px;
+    font-weight: 800;
 }
 
 /* #------------------------------------------ */
@@ -229,7 +306,7 @@ a.btn:hover {
 #login-container {
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     padding: 20px;
     text-align: center;
     width: 500px;
@@ -237,6 +314,7 @@ a.btn:hover {
 
 #signinh2 {
     margin-bottom: 20px;
+    cursor: default;
 }
 
 form {
@@ -262,7 +340,7 @@ button {
     padding: 10px;
     width: 100px;
     margin-top: 10px;
-    background-color: rgb(39, 39, 39);
+    background-color: rgb(0, 0, 0);
     color: white;
     border: none;
     border-radius: 5px;
@@ -271,7 +349,7 @@ button {
 }
 
 button:hover {
-    background-color: rgb(119, 119, 119);
+    background-color: rgb(30, 30, 30);
 }
 
 #remember-container {
@@ -292,11 +370,13 @@ label[for="remember-checkbox"] {
     margin-top: 35px;
     font-size: 10px;
     color: rgb(119, 119, 119);
+    cursor: default;
 }
 
 #copyright2 {
     font-size: 10px;
     color: rgb(119, 119, 119);
+    cursor: default;
 }
 
 #back-button {
@@ -349,4 +429,96 @@ input[type=text], select {
     height: 35px;
 }
 
+#accountsGif {
+    width: 600px;
+    margin-left: 100px;
+}
+
+#accountBtitle {
+    font-size: 90px;
+    font-weight: 1000;
+}
+
+#accountLtitle {
+    font-size: 20px;
+    color: gray;
+    font-weight: 100;
+}
+
+#description {
+    width: 750px;
+}
+
+#pAcc {
+    font-size: 20px;
+}
+
 /* #------------------------------------------ */
+
+#footer {
+    background-color: #191C1F;
+    color: #fff;
+    padding: 40px 0;
+    margin-top: 250px;
+}
+
+#footerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+}
+
+#footerColumns {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.footerColumn {
+    flex-basis: 20%;
+    margin-bottom: 20px;
+}
+
+.columnTitle {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.columnList {
+    list-style: none;
+    padding: 0;
+}
+
+.columnList li {
+    margin-bottom: 10px;
+}
+
+.columnList a {
+    color: gray;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.columnList a:hover {
+    color: white;
+}
+
+#footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.footerDisclaimer {
+    font-size: 0.8rem;
+}
+
+.footerSocialIcons a {
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.footerIcon img {
+    width: 15px;
+}
