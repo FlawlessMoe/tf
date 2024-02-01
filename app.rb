@@ -6,7 +6,7 @@ get('/') do
   slim(:start)
 end
 
-get('/signin') do
+get('/sign-n') do
   slim(:signin)
 end
 
@@ -14,7 +14,7 @@ get('/dashboard') do
   slim(:dashboard)
 end
 
-get('/signup') do
+get('/sign-p') do
   slim(:signup)
 end
 
@@ -34,14 +34,6 @@ get('/security') do
   slim(:security)
 end
 
-get('/contactUs') do
-  slim(:contactUs)
-end
-
-get('/aboutUs') do
-  slim(:aboutUs)
-end
-
-get('/termsAndConditions') do
-  slim(:termsAndConditions)
+get('/loggedin') do
+  slim(:loggedin)
 end

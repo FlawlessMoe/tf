@@ -5,60 +5,179 @@ html
     link rel="icon" href="img/favicon.ico" type="image/x-icon"
     title AnonyPay
 
-  body#startBody
+  body
     header#header
-      div#menu-button
-        a#menuToggle href="javascript:void(0);"
-          img#menuImg src="img/menuImgg.png"
       div#t
-        h1.whiteColorh1 AnonyPay
+        a#titleLink href="/"
+          h1.whiteColorh1 AnonyPay
+      nav#nav-div
+        ul#nav-ul
+          li
+            a.nav-a href="/accounts" ACCOUNTS
+          li
+            a.nav-a href="/transactions" TRANSACTIONS
+          li
+            a.nav-a href="/security" SECURITY
+          li
+            a.nav-a href="/onlineServices" ONLINE SERVICES
+        
       div#signin-button
-        a href="/signin"
-          img#signinImg src="img/userr.png"
-    nav#nav-div
-      ul#nav-ul
-        li
-          a.nav-a href="/" HEM
-        li
-          a.nav-a href="/aboutUs" SOW
-        li
-          a.nav-a href="/dashboard" ALT
+        a.btn2 href="/signin" SIGN IN
+        a.btn href="/signup" SIGN UP
 
-    div#menu-overlay
-      div#menu
-        ul#ulGrid
-          li.liGrid
-            img.menuImageStart src="img/home.png"
-            a.aLink href="/" HOME
-          li.liGrid
-            img.menuImageStart src="img/accounts.png"
-            a.aLink href="/accounts" ACCOUNTS
-          li.liGrid
-            img.menuImageStart src="img/transaction.png"
-            a.aLink href="/transactions" TRANSACTIONS
-          li.liGrid
-            img.menuImageStart src="img/online-services.png"
-            a.aLink href="/onlineServices" ONLINE SERVICES
-          li.liGrid
-            img.menuImageStart src="img/secure.png"
-            a.aLink href="/security" SECURITY
-          li.liGrid
-            img.menuImageStart src="img/chat.png"
-            a.aLink href="/contactUs" CONTACT US
-          li.liGrid
-            img.menuImageStart src="img/about-us.png"
-            a.aLink href="/aboutUs" ABOUT US
-          li.liGrid
-            img.menuImageStart src="img/faq.png"
-            a.aLink href="/faq" FAQs
-          li.liGrid
-            img.menuImageStart src="img/terms-and-conditions.png"
-            a.aLink href="/termsAndConditions" TERMS & CONDS
-        a#closeMenu href="javascript:void(0);" Close
+    div#contentAccounts
+      div#accountDetails
+        div#titles
+          h2#accountLtitle Streamlined, Private, and
+          h1#accountBtitle2 #1 IN THE WORLD
+        div#description
+          p#pAcc Experience a revolutionary banking journey with our innovative accounts, crafted for a seamless and private financial experience.
+        div#button
+          a.btnAcc href="/your-link" GET STARTED
 
-    div#content
-      h2.whiteColor Your Ultimate Payment Solution
-      p.whiteColorp AnonyPay invites you to a world of secure and hassle-free transactions. Join us now and discover why we are the leaders in the industry.
-      a.btn href="/signup" Join Now
+      div#gifImage
+        img#accountsGif src="img/accountsGif.gif"
+
+    div#accountExOne
+      div#accountTextOne
+        h1#titleOne SIMPLIFY YOUR FINANCIAL LIFE
+        p#descOne Discover the simplicity of sending and spending money like never before. AnonyPay makes your financial transactions effortless and stress-free.
+      div#accountImageOne
+        img#imgOne src="img/accountEx.jpg"
+      div#button2
+        a.btnAcc href="/your-link" EXPLORE NOW
+
+
+    div#accountsInfo
+      div#infoOne
+        h1#infoTitle SECURE AND PRIVATE
+        p#infoText Discover a new era of banking with AnonyPay. Our innovative accounts redefine financial freedom, offering zero fees, complete anonymity, and absolute transparency. Experience seamless transactions, unlimited privileges, and a hassle-free banking journey. Join us, where your financial privacy is our top priority.
+
+      div#infoTwo
+        img#infoImg src="img/infoImg.jpg"
+
+    div#accountExTwo
+      div#accountTextTwo
+        h1#titleTwo EASY ACCOUNT MANAGEMENT
+        p#descTwo Simplify your financial life with AnonyPay's user-friendly interface. Effortlessly manage your accounts, transactions, and security settings for a stress-free banking journey.
+      div#accountImageTwo
+        img#imgTwo src="img/creditCards.jpg"
+      div#button
+        a.btnAcc href="/your-link" MANAGE YOUR ACCOUNT
+
+    div#cyp
+      h1#cypTitle Choose Your Plan
+      div#cypContent
+        div.cypOne
+          p.cypTitle BASIC
+          p.cypSubtitle1 Free
+          p.cypDesc Experience the freedom of our Basic Plan—no monthly fees, unlimited transactions, and total anonymity. Register effortlessly and enjoy a virtual debit card for seamless online transactions.
+          a href="/signin"
+            img.cypArrow src="img/right-arrow.png"
+
+        div.cypOne
+          p.cypTitle PLUS
+          p.cypSubtitle $4.99/month
+          p.cypDesc Upgrade to our PLUS Plan and experience priority support, enhanced security, and quicker access to new features for a streamlined banking journey.
+          a href="/signin"
+            img.cypArrow src="img/right-arrow.png"
+
+        div.cypOne
+          p.cypTitlePP PREMIUM
+          p.cypSubtitleP $8.99/month
+          p.cypDesc Elevate your banking with the PREMIUM Plan. Enjoy all Basic Plan perks, plus advanced virtual card security, exclusive promotions, and priority access to currency exchange services.
+          a href="/signin"
+            img.cypArrow src="img/right-arrow.png"
+        
+      div#cypContent2
+        div.cypTwo
+          p.cypTitle2 ADVANCED
+          p.cypSubtitle2 $14.99/month
+          p.cypDesc2 Optimize your banking experience with the ADVANCED Plan. Enjoy all Basic Plan perks, plus personalized financial insights and additional security layers for $14.99/month.
+          a href="/signin"
+            img.cypArrow3 src="img/right-arrow.png"
+
+        div.cypTwo
+          p.cypTitle2 ULTIMATE
+          p.cypSubtitle2 $45/month (Apply Only)
+          p.cypDesc2 Experience unparalleled banking with the ULTIMATE Plan. Enjoy all Basic Plan perks, plus personalized financial consultations and exclusive benefits for $45/month.
+          a href="/signin"
+            img.cypArrow2 src="img/right-arrow.png"
+
+    div#footer
+      div#footerContainer
+        div#footerColumns
+          div.footerColumn
+            h3.columnTitle About Us
+            ul.columnList
+              li
+                a href="#" Our Story
+              li
+                a href="#" Leadership
+              li
+                a href="#" Blog
+              li
+                a href="#" Careers
+
+          div.footerColumn
+            h3.columnTitle Support
+            ul.columnList
+              li
+                a href="#" Help Center
+              li
+                a href="#" Contact Us
+              li
+                a href="#" Security
+              li
+                a href="#" Privacy Policy
+
+          div.footerColumn
+            h3.columnTitle Services
+            ul.columnList
+              li
+                a href="#" Accounts
+              li
+                a href="#" Transactions
+              li
+                a href="#" Online Services
+              li
+                a href="#" Security
+
+          div.footerColumn
+            h3.columnTitle Legal
+            ul.columnList
+              li
+                a href="#" Terms & Conditions
+              li
+                a href="#" Privacy Policy
+              li
+                a href="#" Cookies Policy
+              li
+                a href="#" Compliance
+
+          div.footerColumn
+            h3.columnTitle Connect
+            ul.columnList
+              li
+                a href="#" Facebook
+              li
+                a href="#" Twitter
+              li
+                a href="#" LinkedIn
+              li
+                a href="#" Instagram
+
+        div#footerBottom
+          div.footerDisclaimer
+            p#footerText Copyright © 2024 AnonyPay. All Rights Reserved.
+          div.footerSocialIcons
+            a.footerIcon href="https://flawlessclb.com" 
+              img src="img/facebook.png"
+            a.footerIcon href="https://instagram.com/flawlessclb" 
+              img src="img/twitter.png"
+            a.footerIcon href="https://flawlessclb.com" 
+              img src="img/linkedin.png"
+            a.footerIcon href="https://instagram.com/flawlessclb" 
+              img src="img/instagram.png"
 
 script src="js/app.js" defer

@@ -5,56 +5,25 @@ html
     link rel="icon" href="img/favicon.ico" type="image/x-icon"
     title AnonyPay
 
-  body#startBodyAccounts
+  body
     header#header
-      div#menu-button
-        a#menuToggle href="javascript:void(0);"
-          img#menuImg src="img/menuImggg.png"
       div#t
-        h1.whiteColorAcc AnonyPay
+        a#titleLink href="/"
+          h1.whiteColorh1 AnonyPay
+      nav#nav-div
+        ul#nav-ul
+          li
+            a.nav-a href="/accounts" ACCOUNTS
+          li
+            a.nav-a href="/transactions" TRANSACTIONS
+          li
+            a.nav-a href="/security" SECURITY
+          li
+            a.nav-a href="/onlineServices" ONLINE SERVICES
+        
       div#signin-button
-        a href="/signin"
-          img#signinImg src="img/userrr.png"
-    nav#nav-div
-      ul#nav-ul
-        li
-          a.nav-aAcc href="/" HEM
-        li
-          a.nav-aAcc href="/aboutUs" SOW
-        li
-          a.nav-aAcc href="/dashboard" ALT
-
-    div#menu-overlay
-      div#menu
-        ul#ulGrid
-          li.liGrid
-            img.menuImageStart src="img/home.png"
-            a.aLink href="/" HOME
-          li.liGrid
-            img.menuImageStart src="img/accounts.png"
-            a.aLink href="/accounts" ACCOUNTS
-          li.liGrid
-            img.menuImageStart src="img/transaction.png"
-            a.aLink href="/transactions" TRANSACTIONS
-          li.liGrid
-            img.menuImageStart src="img/online-services.png"
-            a.aLink href="/onlineServices" ONLINE SERVICES
-          li.liGrid
-            img.menuImageStart src="img/secure.png"
-            a.aLink href="/security" SECURITY
-          li.liGrid
-            img.menuImageStart src="img/chat.png"
-            a.aLink href="/contactUs" CONTACT US
-          li.liGrid
-            img.menuImageStart src="img/about-us.png"
-            a.aLink href="/aboutUs" ABOUT US
-          li.liGrid
-            img.menuImageStart src="img/faq.png"
-            a.aLink href="/faq" FAQs
-          li.liGrid
-            img.menuImageStart src="img/terms-and-conditions.png"
-            a.aLink href="/termsAndConditions" TERMS & CONDS
-        a#closeMenu href="javascript:void(0);" Close
+        a.btn2 href="/signin" SIGN IN
+        a.btn href="/signup" SIGN UP
 
     div#contentAccounts
       div#accountDetails
@@ -64,10 +33,75 @@ html
         div#description
           p#pAcc Our innovative accounts are designed to provide you with a hassle-free and anonymous financial experience.
         div#button
-          a.btnAcc href="/your-link" Invite Your Person
+          a.btnAcc href="/your-link" INVITE YOUR PERSON
 
       div#gifImage
         img#accountsGif src="img/accountsGif.gif"
+
+    div#accountExOne
+      div#accountTextOne
+        h1#titleOne MAKE SENDING & SPENDING MONEY SIMPLE
+        p#descOne Now sending money is so much easier than ever before... finally.
+      div#accountImageOne
+        img#imgOne src="img/accountEx.jpg"
+      div#button2
+        a.btnAcc href="/your-link" START NOW
+
+    div#accountsInfo
+      div#infoOne
+        h1#infoTitle HUSTLE LIKE A PRO
+        p#infoText Discover a new era of banking with AnonyPay. Our innovative accounts redefine financial freedom, offering zero fees, complete anonymity, and absolute transparency. Experience seamless transactions, unlimited privileges, and a hassle-free banking journey. Join us, where your financial privacy is our top priority.
+
+      div#infoTwo
+        img#infoImg src="img/infoImg.jpg"
+
+    div#accountExTwo
+      div#accountTextTwo
+        h1#titleTwo LET'S GET PHYSICAL
+        p#descTwo Want the real thing? You can both choose a physical card – and soon, you'll be able to pick from our suite of card designs. Which will you take for your arsenal?
+      div#accountImageTwo
+        img#imgTwo src="img/creditCards.jpg"
+      div#button
+        a.btnAcc href="/your-link" RECIEVE YOUR CARD
+
+    div#cyp
+      h1#cypTitle Choose your plan
+      div#cypContent
+        div.cypOne
+          p.cypTitle STANDARD
+          p.cypSubtitle1 Free
+          p.cypDesc Embrace the freedom of our Free Package—no monthly fees, unlimited transactions, and total anonymity. Register effortlessly and enjoy a virtual debit card for seamless online transactions.
+          a href="/signin"
+            img.cypArrow src="img/right-arrow.png"
+
+        div.cypOne
+          p.cypTitle PLUS
+          p.cypSubtitle $4.99/month
+          p.cypDesc Upgrade to our PLUS Package and experience priority support, enhanced security, and quicker access to new features for a streamlined banking journey.
+          a href="/signin"
+            img.cypArrow src="img/right-arrow.png"
+
+        div.cypOne
+          p.cypTitlePP PREMIUM
+          p.cypSubtitleP $8.99/month
+          p.cypDesc Elevate your banking with the PREMIUM Package. Enjoy all Basic Package perks, plus advanced virtual card security, exclusive promotions, and priority access to currency exchange services.
+          a href="/signin"
+            img.cypArrow src="img/right-arrow.png"
+        
+      div#cypContent2
+        div.cypTwo
+          p.cypTitle2 METAL
+          p.cypSubtitle2 $14.99/month
+          p.cypDesc2 Elevate your banking with the METAL Package. Enjoy all Basic Package perks, plus advanced virtual card security, exclusive promotions, and priority access to currency exchange services.
+          a href="/signin"
+            img.cypArrow3 src="img/right-arrow.png"
+
+        div.cypTwo
+          p.cypTitle2 ULTRA
+          p.cypSubtitle2 $45/month (Apply Only)
+          p.cypDesc2 Elevate your banking with the ULTRA Package. Enjoy all Basic Package perks, plus advanced virtual card security, exclusive promotions, and priority access to currency exchange services.
+          a href="/signin"
+            img.cypArrow2 src="img/right-arrow.png"
 
     div#footer
       div#footerContainer
