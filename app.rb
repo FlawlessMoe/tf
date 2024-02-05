@@ -1,12 +1,27 @@
 require 'sinatra'
-require 'sinatra/reloader'
 require 'slim'
+require 'byebug'
+require 'sqlite3'
+require 'bcrypt'
+require './model.rb'
+require 'sinatra/reloader'
+
+# -----------------------------------
+
+post('/users/') do
+  username = params["username"]
+  password = params["password"]
+  register_user(username, password)
+  redirect('/photos')
+end
+
+# -----------------------------------
 
 get('/') do
   slim(:start)
 end
 
-get('/sign-n') do
+get('/signin') do
   slim(:signin)
 end
 
@@ -14,7 +29,7 @@ get('/dashboard') do
   slim(:dashboard)
 end
 
-get('/sign-p') do
+get('/signup') do
   slim(:signup)
 end
 
@@ -37,3 +52,5 @@ end
 get('/loggedin') do
   slim(:loggedin)
 end
+
+# -----------------------------------
