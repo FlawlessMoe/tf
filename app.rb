@@ -3,7 +3,7 @@ require 'slim'
 require 'byebug'
 require 'sqlite3'
 require 'bcrypt'
-require './model.rb'
+require_relative './model.rb'
 require 'sinatra/reloader'
 
 # -----------------------------------
@@ -47,10 +47,6 @@ end
 
 get('/security') do
   slim(:security)
-end
-
-get('/loggedin') do
-  slim(:loggedin)
 end
 
 # -----------------------------------
