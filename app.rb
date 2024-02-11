@@ -3,8 +3,8 @@ require 'slim'
 require 'byebug'
 require 'sqlite3'
 require 'bcrypt'
-require_relative './model.rb'
 require 'sinatra/reloader'
+require_relative './model.rb'
 
 # -----------------------------------
 

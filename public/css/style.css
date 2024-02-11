@@ -781,3 +781,59 @@ input[type=text], select {
 }
 
 /* ------------------------------------------- */
+
+#ttd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+  
+#displayScreen {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+    width: 450px;
+    height: 800px;
+    background-color: rgb(231, 231, 231);
+}
+
+#screenh1 {
+    font-family: 'Work Sans', sans-serif;
+}
+  
+#nextButton {
+    margin-top: 50px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Work Sans', sans-serif;
+}
+  
+#skipButton {
+    text-decoration: none;
+    color: black;
+    font-family: 'Work Sans', sans-serif;
+}
+  
+#dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+  
+.dot.active {
+    background-color: black;
+    width: 15px;
+    height: 15px;
+}
