@@ -804,6 +804,11 @@ input[type=text], select {
 #screenh1 {
     font-family: 'Work Sans', sans-serif;
 }
+
+#screenp {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
   
 #nextButton {
     margin-top: 50px;

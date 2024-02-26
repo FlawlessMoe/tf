@@ -49,4 +49,9 @@ get('/security') do
   slim(:security)
 end
 
+post('/signup') do
+  db = SQLite3::Database.new("db/users.db")
+  redirect('/security')
+end
+
 # -----------------------------------
