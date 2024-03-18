@@ -13,3 +13,5 @@ document.getElementById('closeMenu').addEventListener('click', function() {
     menu.classList.toggle('menu-open');
     menuOverlay.style.display = 'none';
 });
+
+// --------------------------- //

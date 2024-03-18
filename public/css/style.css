@@ -5,12 +5,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    background-color: #FCFCFF;
 }
 
 /* #------------------------------------------ */
 
 #startBodyAccounts {
-    background-color: #fcfcff;
+    background-color: #FCFCFF;
 }
 
 #signinBody {
@@ -26,7 +27,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: white;
+    background-color: #FCFCFF;
 }
 
 #header {
@@ -339,6 +340,8 @@ nav a:not(:hover) {
 
 form {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -412,41 +415,39 @@ label[for="remember-checkbox"] {
 
 .parallel {
     width: 220px;
+    display: grid;
 }
 
-#lastname {
-    margin-left: 20px;
-}
-
-#password {
-    width: 220px;
-    margin-left: 20px;
-}
-
-.labelSignup {
-    margin-right: 250px;
-}
-
-.labelSignup2 {
-    margin-right: 125px;
+.password {
+    width: 200px;
 }
 
 input[type=text], select {
-    width: 100%;
+    width: 200px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
 
+.notice {
+    background:rgba(100,100,100,0.1);
+    width:60vw;
+    padding:50px;
+    position:fixed;
+    font-size:4rem;
+    font-family:Arial, Helvetica, sans-serif;
+}   
+
 #styleDiv {
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 #countryID{
-    margin-bottom: 25px;
-    margin-right: 135px;
-    height: 35px;
+    height: 38.19px;
+    margin-bottom: 15px;
 }
 
 #accountsGif {
@@ -566,10 +567,12 @@ input[type=text], select {
 
 #cypContent {
     display: flex;
+    background-color: #191C1F;
 }
 
 #cypContent2 {
     display: flex;
+    background-color: #191C1F;
 }
 
 .cypOne {
@@ -587,7 +590,7 @@ input[type=text], select {
 
 .cypTwo {
     width: 430px;
-    height: 180px;
+    height: 210px;
     background-color: white;
     border-radius: 20px;
     margin: 10px;
@@ -597,6 +600,7 @@ input[type=text], select {
 #cypTitle {
     margin-top: 75px;
     color: white;
+    background-color: #191C1F;
 }
 
 .cypTitlePP {
@@ -640,7 +644,7 @@ input[type=text], select {
 
 .cypTitle2 {
     font-size: 20px;
-    margin-top: 15px;
+    margin-top: 30px;
     margin-left: 30px;
 }
 
@@ -681,37 +685,44 @@ input[type=text], select {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
+    background-color: #191C1F;
 }
 
 #footerColumns {
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
+    background-color: #191C1F;
 }
 
 .footerColumn {
     flex-basis: 20%;
     margin-bottom: 20px;
+    background-color: #191C1F;
 }
 
 .columnTitle {
     font-size: 1.2rem;
     margin-bottom: 15px;
+    background-color: #191C1F;
 }
 
 .columnList {
     list-style: none;
     padding: 0;
+    background-color: #191C1F;
 }
 
 .columnList li {
     margin-bottom: 10px;
+    background-color: #191C1F;
 }
 
 .columnList a {
     color: gray;
     text-decoration: none;
     transition: color 0.3s;
+    background-color: #191C1F;
 }
 
 .columnList a:hover {
@@ -723,10 +734,16 @@ input[type=text], select {
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    background-color: #191C1F;
 }
 
 .footerDisclaimer {
     font-size: 0.8rem;
+    background-color: #191C1F;
+}
+
+.footerSocialIcons {
+    background-color: #191C1F;
 }
 
 .footerSocialIcons a {
@@ -736,6 +753,15 @@ input[type=text], select {
 
 .footerIcon img {
     width: 15px;
+    background-color: #191C1F;
+}
+
+#footerText {
+    background-color: #191C1F;
+}
+
+a.footerIcon {
+    background-color: #191C1F;
 }
 
 /* #------------------------------------------ */
@@ -798,7 +824,7 @@ input[type=text], select {
     border-radius: 50px;
     width: 450px;
     height: 800px;
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(238, 238, 238);
 }
 
 #screenh1 {

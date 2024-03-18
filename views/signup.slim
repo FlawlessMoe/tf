@@ -6,35 +6,41 @@ html
     title Sign Up
 
   body#signinBody style="background-image: url('/img/backg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;"
+
     div#login-container
       a#back-button href="/" < Back
       h2#signinh2 AnonyPay
+
       form method="POST" action="/signup"
         div#styleDiv
           div.parallel
             label.labelSignup for="name" Name:
-            input#name type="text" name="name"
-
+            input.name type="text" name="name"
           div.parallel 
-            label.labelSignup2 for="lastname" Lastname:
-            input#lastname type="text" name="lastname"
-
-        label for="email" Email:
-        input#email type="text" name="email"
+            label.labelSignup for="lastname" Lastname:
+            input.name type="text" name="lastname"
 
         div#styleDiv
           div.parallel
             label.labelSignup for="username" Username:
-            input#username type="text" name="username"
+            input.name type="text" name="username"
+          div.parallel
+            label.labelSignup for="email" Email:
+            input.name type="text" name="email"
 
-          div.parallel 
-            label.labelSignup2 for="password" Password:
-            input#password type="password" name="password"
+        div#styleDiv
+          div.parallel
+            label.labelSignup for="password" Password:
+            input.password type="password" name="password"
+          div.parallel
+            label.labelSignup for="password" Repeat Password:
+            input.password type="password" name="passwordConfirm"
 
         div#styleDiv
           div.parallel
             label.labelSignup for="country" Country:
             select#countryID name="country"
+
                 option value="afghanistan" Afghanistan
                 option value="albania" Albania
                 option value="algeria" Algeria
@@ -103,7 +109,7 @@ html
                 option value="grenada" Grenada
                 option value="guatemala" Guatemala
                 option value="guinea" Guinea
-                option value="guinea-bissau" Guinea-Bissau
+                option value="guinea-bissau" Guinea Bissau
                 option value="guyana" Guyana
                 option value="haiti" Haiti
                 option value="honduras" Honduras
