@@ -1,17 +1,27 @@
-document.getElementById('menuToggle').addEventListener('click', function() {
-    const menu = document.getElementById('menu');
-    const menuOverlay = document.getElementById('menu-overlay');
+function redirectToAdd() {
+    window.location.href = '/add';
+}
 
-    menu.classList.toggle('menu-open');
-    menuOverlay.style.display = menu.classList.contains('menu-open') ? 'block' : 'none';
-});
+function redirectToSub() {
+    window.location.href = '/sub';
+}
 
-document.getElementById('closeMenu').addEventListener('click', function() {
-    const menu = document.getElementById('menu');
-    const menuOverlay = document.getElementById('menu-overlay');
+function redirectToSend() {
+    window.location.href = '/send';
+}
 
-    menu.classList.toggle('menu-open');
-    menuOverlay.style.display = 'none';
-});
+function redirectToReceive() {
+    window.location.href = '/receive';
+}
 
-// --------------------------- //
+function redirectToStart() {
+    window.location.href = '/';
+}
+
+function redirectToInfo() {
+    window.location.href = '/accountInfo';
+}
+
+
+
+// ------------------------------------- //

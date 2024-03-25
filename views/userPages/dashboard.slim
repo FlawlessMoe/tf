@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    link rel="stylesheet" href="css/style.css" type="text/css"
+    link rel="icon" href="img/favicon.ico" type="image/x-icon"
+    title Dashboard
+
+  body#ttd
+    div#displayScreen
+      div#userDetails
+        div#userDetails2
+          - if @user_details
+            p#userNameLastname #{@user_details["name"]} #{@user_details["lastname"]}
+          - else
+            p#userNameLastname User details not found
+          button#switchButton onclick="redirectToStart()" Log Out
+
+        - if @user_balance
+          p#userBalance #{@user_balance}
+        - else
+          p#userBalance Balance not found
+
+        div#transactionButtons
+          button.menuButton onclick="redirectToAdd()" +
+          button.menuButton onclick="redirectToSub()" -
+          button.menuButton onclick="redirectToSend()" 🠅
+          button.menuButton onclick="redirectToReceive()" 🠇
+
+      div#bankTemplate
+        p Latest Transactions:
+        ul#latestTransactions
+          - @latest_transactions.each do |transaction|
+            li
+              - if transaction['transaction_type'] == 'add'
+                | +$#{transaction['amount']} #{transaction['created_at']}
+              - elsif transaction['transaction_type'] == 'sub'
+                | -$#{transaction['amount']} #{transaction['created_at']}
+              - elsif transaction['transaction_type'] == 'send'
+                | -$#{transaction['amount']} to #{transaction['receiver_id']} #{transaction['created_at']}
+              - elsif transaction['transaction_type'] == 'receive'
+                | +$#{transaction['amount']} from #{transaction['sender_id']} #{transaction['created_at']}
+
+
+      div#userDetails3
+          - if @user_details
+            p#userNameLastname #{@user_username["username"]}
+          - else
+            p#userNameLastname Account Number not found
+          button#switchButton2 onclick="redirectToInfo()" Info
+
+  script src="js/app.js" defer

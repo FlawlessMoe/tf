@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    link rel="stylesheet" href="/css/style.css" type="text/css"
+    link rel="icon" href="/img/favicon.ico" type="image/x-icon"
+    title Send Money
+
+  body#ttd
+    a#back-button2 href="/dashboard" < Back
+    div#displayScreen2
+      form#qrCodeDiv4 action="/send_money" method="POST" autocomplete="off"
+        div
+          label.moneyFlow for="special_code" Receiver Account Number:
+          input type="text" id="special_code" name="special_code"
+        div
+          label.moneyFlow for="amount" Amount to Send:
+        input type="text" id="amount" name="amount"
+
+        label.moneyFlow for="amount" Choose Network
+        select#chooseNetwork name="bil" placeholder="Bilmärke" autocomplete="off"
+          option value="alfa-romeo" BTC (Bitcoin)
+          option value="alfa-romeo" ETH (Ethereum)
+          option value="alfa-romeo" MATIC (Polygon)
+
+        div#buttonSend
+          button type="submit" Send
+
+
+
+script src="js/app.js" defer

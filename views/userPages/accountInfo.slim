@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    link rel="stylesheet" href="css/style.css" type="text/css"
+    link rel="icon" href="img/favicon.ico" type="image/x-icon"
+    title Account Info
+
+  body#ttd
+    a#back-button2 href="/dashboard" < Back
+    div#displayScreen2
+      form#qrCodeDiv4 autocomplete="off"
+        div
+            label.moneyFlow for="special_code" Account Name:
+            p.accountInfoText #{@user_details["name"]} #{@user_details["lastname"]}
+        div
+            label.moneyFlow for="special_code" Account Number:
+            p.accountInfoText #{@user_number["accountNumber"]}
+        div
+            label.moneyFlow for="special_code" Expiration Date and CVV:
+            p.accountInfoText #{@account_date["accountDate"][0, 2]}/#{@account_date["accountDate"][2, 2]} #{@account_cvv["cvv"]}
+
+
+
+
+script src="js/app.js" defer

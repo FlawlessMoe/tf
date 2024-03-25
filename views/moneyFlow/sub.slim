@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    link rel="stylesheet" href="/css/style.css" type="text/css"
+    link rel="icon" href="/img/favicon.ico" type="image/x-icon"
+    title Add Balance
+
+  body#ttd
+    a#back-button2 href="/dashboard" < Back
+    div#displayScreen2
+      form action="/sub_balance" method="POST" autocomplete="off"
+        div
+          label.moneyFlow for="amount" Enter amount to sub:
+        input type="text" id="amount" name="amount"
+        div
+          button type="submit" Submit
+
+
+
+script src="js/app.js" defer

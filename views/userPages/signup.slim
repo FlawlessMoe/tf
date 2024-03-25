@@ -11,7 +11,7 @@ html
       a#back-button href="/" < Back
       h2#signinh2 AnonyPay
 
-      form method="POST" action="/signup"
+      form method="POST" action="/signup" autocomplete="off"
         div#styleDiv
           div.parallel
             label.labelSignup for="name" Name:
@@ -238,10 +238,6 @@ html
                 option value="zimbabwe" Zimbabwe
 
         button#signin-btn type="submit" Sign Up
-
-        div#remember-container
-          input#remember-checkbox type="checkbox" name="remember"
-          label for="remember-checkbox" Remember me
 
       p#copyright All Rights and Reserved to AnonyPay
       p#copyright2 2024 Copyright.
