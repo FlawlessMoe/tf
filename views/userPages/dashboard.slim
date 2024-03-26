@@ -29,16 +29,16 @@ html
       div#bankTemplate
         p Latest Transactions:
         ul#latestTransactions
-          - @latest_transactions.each do |transaction|
-            li
-              - if transaction['transaction_type'] == 'add'
-                | +$#{transaction['amount']} #{transaction['created_at']}
-              - elsif transaction['transaction_type'] == 'sub'
-                | -$#{transaction['amount']} #{transaction['created_at']}
-              - elsif transaction['transaction_type'] == 'send'
-                | -$#{transaction['amount']} to #{transaction['receiver_id']} #{transaction['created_at']}
-              - elsif transaction['transaction_type'] == 'receive'
-                | +$#{transaction['amount']} from #{transaction['sender_id']} #{transaction['created_at']}
+        - @latest_transactions.each do |transaction|
+          li
+            - if transaction['transaction_type'] == 'add'
+              | +$#{transaction['amount']} #{transaction['created_at']}
+            - elsif transaction['transaction_type'] == 'sub'
+              | -$#{transaction['amount']} #{transaction['created_at']}
+            - elsif transaction['transaction_type'] == 'send'
+              | -$#{transaction['amount']} to #{transaction['receiver_id']} #{transaction['created_at']}
+            - elsif transaction['transaction_type'] == 'receive'
+              | +$#{transaction['amount']} from #{transaction['sender_id']} #{transaction['created_at']}
 
 
       div#userDetails3

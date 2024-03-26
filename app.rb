@@ -46,7 +46,7 @@ end
 def fetch_latest_transactions(user_id)
   db = SQLite3::Database.new('db/users.db')
   db.results_as_hash = true
-  db.execute("SELECT * FROM transactions WHERE user_id = ? ORDER BY created_at DESC LIMIT 5", user_id)
+  db.execute("SELECT * FROM transactions WHERE transaction_id = ? ORDER BY created_at DESC LIMIT 5", user_id)
 end
 
 def format_balance(balance)
@@ -272,8 +272,7 @@ post '/send_money' do
       new_receiver_balance = receiver_balance + amount
       db.execute("UPDATE users SET balance = ? WHERE user_id = ?", new_receiver_balance, receiver_id)
 
-      # Record transaction
-      db.execute("INSERT INTO transactions (user_id, amount, receiver_id, transaction_type) VALUES (?, ?, ?, 'send')", sender_id, amount, receiver_id)
+      db.execute("INSERT INTO transactions (amount, sender_id, receiver_id, transaction_type) VALUES (?, ?, ?, 'send')", amount, sender_id, receiver_id)
 
       redirect '/successTransfer'
     else
@@ -281,7 +280,6 @@ post '/send_money' do
     end
   end
 end
-
 get '/receive' do
   user_id = session[:id]
 
