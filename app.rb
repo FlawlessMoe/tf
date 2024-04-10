@@ -43,10 +43,10 @@ def fetch_user_account_cvv(user_id)
   account_cvv
 end
 
-def fetch_latest_transactions(user_id)
+def fetch_latest_transactions(user_id, limit = 5)
   db = SQLite3::Database.new('db/users.db')
   db.results_as_hash = true
-  db.execute("SELECT * FROM transactions WHERE transaction_id = ? ORDER BY created_at DESC LIMIT 5", user_id)
+  db.execute("SELECT * FROM transactions WHERE sender_id = ? OR receiver_id = ? ORDER BY transaction_id DESC LIMIT ?", user_id, user_id, limit)
 end
 
 def format_balance(balance)
@@ -221,6 +221,8 @@ post '/add_balance' do
 
   new_balance = current_balance[0] + amount
 
+  db.execute("INSERT INTO transactions (amount, transaction_type) VALUES (?, 'add')", amount)
+
   db.execute("UPDATE users SET balance = ? WHERE user_id = ?", new_balance, user_id)
 
   redirect '/dashboard'
@@ -229,6 +231,7 @@ end
 get '/sub' do
   slim :"moneyFlow/sub"
 end
+
 
 post '/sub_balance' do
   user_id = session[:id]
@@ -241,6 +244,9 @@ post '/sub_balance' do
     redirect '/wrongFunds'
   else
     new_balance = current_balance[0] - amount
+
+    db.execute("INSERT INTO transactions (amount, transaction_type) VALUES (?, 'sub')", amount)
+
     db.execute("UPDATE users SET balance = ? WHERE user_id = ?", new_balance, user_id)
     redirect '/dashboard'
   end
@@ -272,7 +278,10 @@ post '/send_money' do
       new_receiver_balance = receiver_balance + amount
       db.execute("UPDATE users SET balance = ? WHERE user_id = ?", new_receiver_balance, receiver_id)
 
-      db.execute("INSERT INTO transactions (amount, sender_id, receiver_id, transaction_type) VALUES (?, ?, ?, 'send')", amount, sender_id, receiver_id)
+      sender_account_number = db.execute("SELECT accountNumber FROM users WHERE user_id = ?", sender_id).first[0]
+      receiver_account_number = db.execute("SELECT accountNumber FROM users WHERE user_id = ?", receiver_id).first[0]
+
+      db.execute("INSERT INTO transactions (amount, sender_id, sender_account_number, receiver_id, receiver_account_number, transaction_type) VALUES (?, ?, ?, ?, ?, 'send')", amount, sender_id, sender_account_number, receiver_id, receiver_account_number)
 
       redirect '/successTransfer'
     else
@@ -280,6 +289,7 @@ post '/send_money' do
     end
   end
 end
+
 get '/receive' do
   user_id = session[:id]
 
@@ -302,7 +312,6 @@ post '/receive_money' do
   current_balance = db.execute("SELECT balance FROM users WHERE user_id = ?", user_id).first[0]
   new_balance = current_balance + amount
 
-  # Record transaction
   db.execute("INSERT INTO transactions (user_id, amount, transaction_type) VALUES (?, ?, 'receive')", user_id, amount)
 
   db.execute("UPDATE users SET balance = ? WHERE user_id = ?", new_balance, user_id)
@@ -332,7 +341,6 @@ post '/add_balance' do
 
   new_balance = current_balance[0] + amount
 
-  # Record transaction
   db.execute("INSERT INTO transactions (user_id, amount, transaction_type) VALUES (?, ?, 'add')", user_id, amount)
 
   db.execute("UPDATE users SET balance = ? WHERE user_id = ?", new_balance, user_id)
@@ -352,7 +360,6 @@ post '/sub_balance' do
   else
     new_balance = current_balance[0] - amount
 
-    # Record transaction
     db.execute("INSERT INTO transactions (user_id, amount, transaction_type) VALUES (?, ?, 'sub')", user_id, amount)
 
     db.execute("UPDATE users SET balance = ? WHERE user_id = ?", new_balance, user_id)
@@ -360,11 +367,10 @@ post '/sub_balance' do
   end
 end
 
-# Error handling
 not_found do
-  slim :not_found
+  slim :"errors/not_found"
 end
 
 error do
-  slim :error
+  slim :"errors/error"
 end

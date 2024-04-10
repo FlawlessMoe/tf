@@ -21,7 +21,3 @@ function redirectToStart() {
 function redirectToInfo() {
     window.location.href = '/accountInfo';
 }
-
-
-
-// ------------------------------------- //
